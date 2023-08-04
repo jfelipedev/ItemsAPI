@@ -1,5 +1,5 @@
 const express = require("express");
-const EscudoSimples = require("../models/EscudoSimpleschema");
+const EscudoSimples = require("../models/escudo-simples-schema");
 
 const router = express.Router();
 

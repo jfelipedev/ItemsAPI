@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const SetSimplesController = require("./controllers/setSimplesController");
-const ArmaSimplesController = require("./controllers/armaSimplesController");
-const EscudoSimplesController = require("./controllers/escudoSimplesController");
+const setSimplesController = require("./controllers/set-simples-control");
+const armaSimplesController = require("./controllers/arma-simples-control");
+const escudoSimplesController = require("./controllers/escudo-simples-control");
 
 const PORT = process.env.PORT || 3333;
 
@@ -38,9 +38,9 @@ app.get("/", (request, response) => {
 
 // --------------- ROTAS
 
-app.use("/set/simples/", SetSimplesController);
-app.use("/armas/simples/", ArmaSimplesController);
-app.use("/escudos/simples/", EscudoSimplesController);
+app.use("/set/simples/", setSimplesController);
+app.use("/armas/simples/", armaSimplesController);
+app.use("/escudos/simples/", escudoSimplesController);
 
 app.listen(PORT, () =>
   console.log("Servidor foi iniciado com sucesso em http://localhost:" + PORT)
